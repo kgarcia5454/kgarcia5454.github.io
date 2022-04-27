@@ -1,0 +1,237 @@
+html{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.background {
+    background: rgb(16, 14, 9);
+    background: radial-gradient(
+        circle,
+        rgba(16, 14, 9, 1) 0%,
+        rgb(104, 111, 127) 0.2%,
+        rgba(40, 44, 52, 1) 60%,
+        rgb(0, 0, 0) 100%
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#intro {
+    overflow-x: hidden;
+}
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.page-title {
+    color: white;
+    font-size: 100px;
+    font-weight: bolder;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    line-height: 90%;
+}
+
+#cursor {
+    color: #f8f8f0;
+    font-size: 100px;
+    font-weight: bolder;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+.center {
+    
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+
+
+#profile_pic {
+    display: block;
+    height: 200px;
+    width: 200px;
+    border-radius: 40%;
+    border: 3px solid #ffffff;
+    animation: animate 9s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg) translateY(0%);
+    }
+
+    50% {
+        transform: perspective(1000px) rotateY(180deg) translateY(-13%);
+    }
+
+    100% {
+        transform: perspective(1000px) rotateY(360deg) translateY(0%);
+    }
+}
+
+.summary-content {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 1vw;
+    text-align: center;
+    
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+}
+
+#ASU {
+    color: #efaec0;
+    font-weight: bolder;
+}
+
+#IconSection {
+    text-align: center;
+    margin-top: 2vh;
+    margin-left: -4vw;
+   
+}
+
+.icons {
+    height: 75px;
+    width: 75px;
+    margin-left: 4vw;
+}
+
+
+
+.icons:hover {
+    filter: brightness(200%);
+}
+
+#GitHubIcon {
+    filter: invert(75%);
+}
+
+#GitHubIcon:hover {
+    filter: invert(100%);
+}
+
+.toggle-button {
+    display: inline-block;
+    text-align: center;
+    border: none;
+    text-transform: uppercase;
+    background: white;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-style: italic;
+    margin-right: 1vw;
+    margin-left: 0.5vw;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.642);;
+    padding: 20px;
+}
+
+
+
+#projects_toggle {
+    background-color: #a0224a;;
+}
+
+#resume_toggle {
+    background-color:#40aaf2 ;
+}
+
+#about_toggle {
+    background-color: #006a9e;
+}
+
+
+#About {
+    width: 100%;
+    margin-top: 1vh;
+    height: 0vh;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.743);
+    text-align: center;
+    transition: 0.9s ease;
+}
+
+#AboutText {
+    color: white;
+}
+
+@media screen and (max-width: 800px) {
+
+    html{
+        overflow-x: hidden;
+        overflow-y: hidden;
+        height: 100%;
+
+    }
+ 
+    body {
+        overflow-x: hidden;
+       
+    }
+    
+    #intro_page_title {
+        font-size: 55px;
+    }
+
+    .page-title {
+        font-size: 85px;
+        width: 100%;
+    }
+
+    #cursor {
+        display: none;
+    }
+
+    .icons {
+        margin: 3.5vh 20px 0 6vw;
+    }
+
+    #IconSection{
+        margin-top: -2vh;
+        margin-left: 2vw;
+    }
+
+    .toggle-button{
+
+        padding: 3vw;
+
+    }
+}
+
+@media screen and (min-width: 801px) {
+    #intro {
+        overflow-y: hidden;
+    }
+
+    .toggle-button:hover {
+        border-radius: 90px;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+    }
+
+    .toggle-button:active{
+        transition: all 0.1s ease 0s;
+        padding: 15px;
+        
+        
+    }
+
+}

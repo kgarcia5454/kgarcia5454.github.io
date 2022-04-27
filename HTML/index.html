@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="HomePage">
+    <head> 
+        <title>Kevin Garcia's Portfolio</title>
+        <link rel="stylesheet" href="../CSS/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body class="background" id="intro">            
+    
+        <p class="page-title">Kevin Garcia<span id="cursor">_</span></p>
+
+        <div> 
+            <img id="profile_pic" class="center" src="https://github.com/kgarcia5454.png" alt="Profile Picture">
+            
+                <p class="summary-content">
+                    Digital Culture Alumni <span id="ASU">ASU</span> <br> 
+                    Graduated 2021
+                </p>
+
+        </div>
+
+        <div class="center">
+
+            <button onclick="location.href='./projects.html'" class="toggle-button"id="projects_toggle">
+                Projects
+            </button>
+
+            <button onclick="location.href='https://docs.google.com/document/d/1A6gu-TgSVaLoCzrhvBYylLlv1PxzBmFfiFSSKii2bn4/export?format=pdf'" class="toggle-button"id="resume_toggle">
+                Resume
+            </button>
+
+            <button onclick="ShowAbout()" class="toggle-button"id="about_toggle">
+                About
+            </button>
+        
+        </div>
+
+        <div id="About">
+
+            <p id="AboutText">About Me Test</p>
+
+
+        </div>
+
+        <div id="IconSection">
+
+            <a target="_blank" href="mailto:krgarci6@asu.edu"><img src="../assets/envelope-regular.svg" alt="My Email" class="icons"></a>
+
+            <a target="_blank" href="https://www.linkedin.com/in/kevin-garcia-gomez-b5216a165/"><img src="../assets/linkedin-in-brands.svg" alt="My LinkedIn" class="icons"></a>
+
+            <a target="_blank" href="https://github.com/kgarcia5454"><img src="../assets/github-brands.svg" alt="My GitHub" class="icons" id="GitHubIcon"></a>
+
+        </div>
+
+        <script src="../JS/HomePage.js"></script>
+    </body>
+</html>
