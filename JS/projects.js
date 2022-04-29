@@ -2,15 +2,22 @@ fetch("https://api.github.com/users/kgarcia5454/repos")
 .then(response => response.json())
 .then(repos => {
     for(const repo of repos){
-
-        const repoName = repo.name
+        let repoName = repo.name
         const repoDescription = repo.description
         const repoURL = repo.html_url
         const repoLanguageList = repo.languages_url
 
+        let Title = repo.name;
+        Title = Title.replace(/[_-]/g, " "); 
+
         //Skipping profile readme
         if(repoName == "kgarcia5454"){
             continue;
+        }
+        
+        //Changing Github.io name to its true name ※ 
+        if(repoName == "kgarcia5454.github.io"){
+            Title = "Personal Portfolio";
         }
 
         const cardContainer = document.createElement('div')
@@ -31,7 +38,7 @@ fetch("https://api.github.com/users/kgarcia5454/repos")
 
         const projectTitle = document.createElement('h3')
         projectTitle.className = "project-name"
-        projectTitle.textContent = repoName
+        projectTitle.textContent = Title
 
         const projectDescription = document.createElement('p')
         projectDescription.textContent = ("Description: "+ repoDescription)
@@ -99,8 +106,6 @@ function UrlTest(url){
     var http = new XMLHttpRequest();
     http.open("HEAD", url, false);
     http.send();
-    if(http.status!= 404){
-        return true;
-    }
-    return false; 
+
+    return http.status!=404
 }
