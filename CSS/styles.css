@@ -1,5 +1,6 @@
 html{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
 }
 
 .background {
@@ -20,13 +21,14 @@ html{
 }
 html {
     height: 100%;
+    overflow-y: hidden;
 }
 
 body {
     height: 100%;
     width: 100%;
     margin: auto;
-    padding-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .page-title {
@@ -35,7 +37,7 @@ body {
     font-weight: bolder;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     text-align: center;
-    margin-top: 3vh;
+    margin-top: 3.5vh;
     margin-bottom: 3vh;
     line-height: 90%;
 }
@@ -90,7 +92,7 @@ body {
     text-align: center;
     
     margin-top: 3vh;
-    margin-bottom: 2vh;
+    margin-bottom: 3vh;
 }
 
 #ASU {
@@ -161,15 +163,53 @@ body {
 #About {
     width: 100%;
     margin-top: 1vh;
-    height: 0vh;
-    overflow: hidden;
+    border-top:0px ridge white;
+    border-bottom:0px ridge white;
     background-color: rgba(0, 0, 0, 0.743);
     text-align: center;
-    transition: 0.9s ease;
+    color: white;
+    overflow-y: hidden;
+    max-height: 0%;
+    transition-property: all;
+    transition-duration: 1.3s;
+    
 }
 
-#AboutText {
-    color: white;
+#About.open{
+    max-height: 60%;
+    border-top:3px ridge white;
+    border-bottom:3px ridge white;
+}
+
+#AboutText{
+    text-align: center;
+}
+
+#Education {
+    
+
+}
+
+#EducationText{
+    margin-bottom: 40px;
+    font-size: 1.8vh;
+    
+}
+
+#EducationLogo{
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+#ASULogo{
+    height:15%;
+    width: 25%;
+}
+
+#Logos{
+    font-size: 10vh;
+    margin-bottom: 1.5vh;
+    
 }
 
 @media screen and (max-width: 800px) {
@@ -177,13 +217,13 @@ body {
     html{
         overflow-x: hidden;
         overflow-y: hidden;
+        
         height: 100%;
 
     }
  
     body {
         overflow-x: hidden;
-       
     }
     
     #intro_page_title {
@@ -191,6 +231,8 @@ body {
     }
 
     .page-title {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
         font-size: 85px;
         width: 100%;
     }
@@ -200,7 +242,7 @@ body {
     }
 
     .icons {
-        margin: 3.5vh 20px 0 6vw;
+        margin: 5vh 20px 0 6vw;
     }
 
     #IconSection{
@@ -211,14 +253,27 @@ body {
     .toggle-button{
 
         padding: 3vw;
+    }
 
+    #ASULogo{
+        height:10vh;
+        width: 70%;
+    }
+
+    #Logos{
+        font-size: 7.6vh;
+    }
+
+    #About{
+        max-height: 0%;
+    }
+
+    #About.open{
+        max-height: 75%;
     }
 }
 
 @media screen and (min-width: 801px) {
-    #intro {
-        overflow-y: hidden;
-    }
 
     .toggle-button:hover {
         border-radius: 90px;
@@ -230,7 +285,8 @@ body {
         transition: all 0.1s ease 0s;
         padding: 15px;
         
-        
     }
+
+   
 
 }
