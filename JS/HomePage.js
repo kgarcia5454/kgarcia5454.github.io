@@ -17,4 +17,12 @@ setInterval(() => {
 
 function ShowAbout(){
     About.classList.toggle('open'); 
+
+    if(window.screen.width > 800){
+        setTimeout(function() {
+            About.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+        }, 650);
+    }
 }
+
+

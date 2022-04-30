@@ -1,78 +1,84 @@
 <!DOCTYPE html>
 <html lang="en" class="HomePage">
-    <head> 
-        <title>Kevin Garcia's Portfolio</title>
-        <link rel="stylesheet" href="../CSS/styles.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
 
-    <body class="background" id="intro">            
-    
-        <p class="page-title">Kevin Garcia<span id="cursor">_</span></p>
+<head>
+    <title>Kevin Garcia's Portfolio</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-        <div> 
-            <img id="profile_pic" class="center" src="https://github.com/kgarcia5454.png" alt="Profile Picture"> 
-                <p class="summary-content">
-                    Software Developer
-                </p>
-        </div>
+<body class="background" id="intro">
 
-        <div class="center">
+    <p class="page-title">Kevin Garcia<span id="cursor">_</span></p>
 
-            <button onclick="location.href='./projects.html'" class="toggle-button"id="projects_toggle">
-                Projects
-            </button>
+    <div>
+        <img id="profile_pic" class="center" src="https://github.com/kgarcia5454.png" alt="Profile Picture">
+        <p class="summary-content">
+            Software Developer
+        </p>
+    </div>
 
-            <button onclick="location.href='https://docs.google.com/document/d/1A6gu-TgSVaLoCzrhvBYylLlv1PxzBmFfiFSSKii2bn4/export?format=pdf'" class="toggle-button"id="resume_toggle">
-                Resume
-            </button>
+    <div class="center">
 
-            <button onclick="ShowAbout()" class="toggle-button"id="about_toggle">
-                About
-            </button>
-        
-        </div>
+        <button onclick="location.href='./projects.html'" class="toggle-button" id="projects_toggle">
+            Projects
+        </button>
 
-        <div id="About">
-            <div id="AboutText">
-                <div id="Education">
-                    <h1>Education</h1>
+        <button
+            onclick="location.href='https://docs.google.com/document/d/1A6gu-TgSVaLoCzrhvBYylLlv1PxzBmFfiFSSKii2bn4/export?format=pdf'"
+            class="toggle-button" id="resume_toggle">
+            Resume
+        </button>
 
-                    <div id="EducationLogo">
-                        <img src="../assets/ASU.png" alt="ASU Logo" id = "ASULogo">
-                    </div>
+        <button onclick="ShowAbout()" class="toggle-button" id="about_toggle">
+            About
+        </button>
 
-                    <div id="EducationText">
-                        <p>2017-2021</p>
-                        <p>Arizona State University - Digital Culture </p>
-                        <p>GPA:3.4</p>
-                    </div>  
+    </div>
+
+    <div id="About">
+        <div id="AboutText">
+            <div id="Education">
+                <h1>Education</h1>
+
+                <div id="EducationLogo">
+                    <img src="../assets/ASU.png" alt="ASU Logo" id="ASULogo">
                 </div>
 
-                <div id="Skills">
-                    <h1>Skills</h2>
-
-                    <div id="Logos">
-                        <i class="devicon-java-plain-wordmark"></i>
-                        <i class="devicon-html5-plain-wordmark"></i>
-                        <i class="devicon-css3-plain-wordmark"></i>
-                        <i class="devicon-javascript-plain"></i>
-                        <i class="devicon-react-original-wordmark"></i>
-                        <i class="devicon-csharp-plain"></i>
-                        <i class="devicon-arduino-plain-wordmark"></i>
-                    </div>
-                    
+                <div id="EducationText">
+                    <p>Arizona State University - Digital Culture </p>
+                    <p>Bachelors Degree</p>
+                    <p>GPA:3.4</p>
                 </div>
             </div>
-        </div>
 
-        <div id="IconSection">
-            <a target="_blank" href="mailto:krgarci6@asu.edu"><img src="../assets/envelope-regular.svg" alt="My Email" class="icons"></a>
-            <a target="_blank" href="https://www.linkedin.com/in/kevin-garcia-gomez-b5216a165/"><img src="../assets/linkedin-in-brands.svg" alt="My LinkedIn" class="icons"></a>
-            <a target="_blank" href="https://github.com/kgarcia5454"><img src="../assets/github-brands.svg" alt="My GitHub" class="icons" id="GitHubIcon"></a>
-        </div>
+            <div id="Skills">
+                <h1>Skills</h2>
 
-        <script src="../JS/HomePage.js"></script>
-    </body>
+                    <div id="Logos">
+                        <em class="devicon-java-plain-wordmark"></em>
+                        <em class="devicon-html5-plain-wordmark"></em>
+                        <em class="devicon-css3-plain-wordmark"></em>
+                        <em class="devicon-javascript-plain"></em>
+                        <em class="devicon-react-original-wordmark"></em>
+                        <em class="devicon-csharp-plain"></em>
+                        <em class="devicon-arduino-plain-wordmark"></em>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="IconSection">
+        <a target="_blank" href="mailto:krgarci6@asu.edu"><img src="../assets/envelope-regular.svg" alt="My Email"
+                class="icons"></a>
+        <a target="_blank" href="https://www.linkedin.com/in/kevin-garcia-gomez-b5216a165/"><img
+                src="../assets/linkedin-in-brands.svg" alt="My LinkedIn" class="icons"></a>
+        <a target="_blank" href="https://github.com/kgarcia5454"><img src="../assets/github-brands.svg" alt="My GitHub"
+                class="icons" id="GitHubIcon"></a>
+    </div>
+
+    <script src="../JS/HomePage.js"></script>
+</body>
+
 </html>
