@@ -1,6 +1,5 @@
-html{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   
+html {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .background {
@@ -51,14 +50,11 @@ body {
 }
 
 .center {
-    
     margin: 0 auto;
     width: auto;
     height: auto;
     text-align: center;
 }
-
-
 
 #profile_pic {
     display: block;
@@ -87,10 +83,10 @@ body {
     color: #ffffff;
     font-size: 48px;
     font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     margin-left: 1vw;
     text-align: center;
-    
+
     margin-top: 3vh;
     margin-bottom: 3vh;
 }
@@ -112,8 +108,6 @@ body {
     width: 75px;
     margin-left: 4vw;
 }
-
-
 
 .icons:hover {
     filter: brightness(200%);
@@ -142,30 +136,27 @@ body {
     font-style: italic;
     margin-right: 1vw;
     margin-left: 0.5vw;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.642);;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.642);
     padding: 20px;
 }
 
-
-
 #projects_toggle {
-    background-color: #a0224a;;
+    background-color: #a0224a;
 }
 
 #resume_toggle {
-    background-color:#40aaf2 ;
+    background-color: #40aaf2;
 }
 
 #about_toggle {
     background-color: #006a9e;
 }
 
-
 #About {
     width: 100%;
     margin-top: 1vh;
-    border-top:0px ridge white;
-    border-bottom:0px ridge white;
+    border-top: 0px ridge white;
+    border-bottom: 0px ridge white;
     background-color: rgba(0, 0, 0, 0.743);
     text-align: center;
     color: white;
@@ -173,59 +164,55 @@ body {
     max-height: 0%;
     transition-property: all;
     transition-duration: 1.3s;
-    
 }
 
-#About.open{
+#About.open {
     max-height: 65%;
-    border-top:3px ridge white;
-    border-bottom:3px ridge white;
+    border-top: 3px ridge white;
+    border-bottom: 3px ridge white;
 }
 
-#AboutText{
+#AboutText {
     text-align: center;
 }
 
-#EducationText{
+#EducationText {
     margin-bottom: 40px;
     font-size: 20px;
     font-weight: bold;
 }
 
-#EducationLogo{
+#EducationLogo {
     margin-top: -20px;
     margin-bottom: -20px;
 }
 
-#ASULogo{
-    height:15%;
+#ASULogo {
+    height: 15%;
     width: 25%;
 }
 
-#Logos{
+#Logos {
     font-size: 10vh;
     margin-bottom: 1.5vh;
-    
 }
 
 @media screen and (max-width: 800px) {
-
-    html{
+    html {
         overflow-x: hidden;
         overflow-y: hidden;
-        
-        height: 100%;
 
+        height: 100%;
     }
- 
+
     body {
         overflow-x: hidden;
     }
 
-    .summary-content{
+    .summary-content {
         font-size: 36px;
     }
-    
+
     #intro_page_title {
         font-size: 55px;
     }
@@ -245,47 +232,42 @@ body {
         margin: 5vh 20px 0 6vw;
     }
 
-    #IconSection{
+    #IconSection {
         margin-top: -2vh;
         margin-left: 2vw;
     }
 
-    .toggle-button{
-
+    .toggle-button {
         padding: 3vw;
     }
 
-    #ASULogo{
-        height:10vh;
+    #ASULogo {
+        height: 10vh;
         width: 70%;
     }
 
-    #Logos{
+    #Logos {
         font-size: 7.6vh;
     }
 
-    #About{
+    #About {
         max-height: 0%;
     }
 
-    #About.open{
+    #About.open {
         max-height: 100%;
     }
 }
 
 @media screen and (min-width: 801px) {
-
     .toggle-button:hover {
         border-radius: 90px;
         transition: all 0.3s ease 0s;
         cursor: pointer;
     }
 
-    .toggle-button:active{
+    .toggle-button:active {
         transition: all 0.1s ease 0s;
         padding: 15px;
-        
     }
-
-    
 }

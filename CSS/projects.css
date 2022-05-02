@@ -1,10 +1,9 @@
 #intro_page_title {
     color: white;
-    
 }
 
-html{
-    overflow-y:visible ;
+html {
+    overflow-y: visible;
 }
 
 a:link {
@@ -35,21 +34,17 @@ body {
     margin-bottom: 15px;
 }
 
-
 #Deployment {
     margin-bottom: 1.2vh;
     color: black;
-    border: 5px solid black ;
+    border: 5px solid black;
 }
 
-.project-name{
-    
+.project-name {
     margin-top: 2vh;
     margin-bottom: 2vh;
     font-size: 5vh;
-    
 }
-
 
 .project-image {
     margin-bottom: -5px;
