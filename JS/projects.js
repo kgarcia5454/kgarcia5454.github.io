@@ -1,6 +1,7 @@
 fetch("https://api.github.com/users/kgarcia5454/repos")
 .then(response => response.json())
 .then(repos => {
+    document.getElementById("Wheel").style.display = "none"
     for(const repo of repos){
         let repoName = repo.name
         const repoDescription = repo.description

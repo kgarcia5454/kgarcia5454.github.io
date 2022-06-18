@@ -11,13 +11,17 @@
 
 <body class="background">
     <a href="./index.html" id="back_button" class="toggle-button">
-        <span style="font-weight: bolder;">←</span>
+        <span style="font-weight: bolder;">← Back</span>
     </a>
 
     <p class = "page-title" id="intro_page_title">Projects<span id="cursor">_</span></p>
 
-    <div id="projects_container"></div>
+    <div onload="onLoad()" class="Loading" id="Wheel">
+    </div>
 
+    <div id = "projects_container"></div>
+
+    <script src="../JS/Loading.js"></script>
     <script src="../JS/projects.js"></script>
     <script src="../JS/HomePage.js"></script>
 </body>
