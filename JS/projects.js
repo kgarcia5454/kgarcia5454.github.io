@@ -66,7 +66,7 @@ fetch("https://api.github.com/users/kgarcia5454/repos")
 
         console.log(repoName);
 
-        const url= "https://kgarcia5454.github.io/"+repoName+"/";
+        let url= "https://kgarcia5454.github.io/"+repoName+"/";
 
         if(repoName=="kgarcia5454.github.io"){
             url= "https://kgarcia5454.github.io"
