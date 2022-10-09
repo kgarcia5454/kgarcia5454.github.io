@@ -1,7 +1,8 @@
 fetch("https://api.github.com/users/kgarcia5454/repos")
 .then(response => response.json())
 .then(repos => {
-    document.getElementById("Wheel").style.display = "none"
+    document.getElementById("Wheel").style.animation = "FadeOut 2s forwards"
+   
     for(const repo of repos){
         let repoName = repo.name
         const repoDescription = repo.description
@@ -63,7 +64,14 @@ fetch("https://api.github.com/users/kgarcia5454/repos")
             projectLanguage.className = "project-language"
         })
 
-        const url= "https://kgarcia5454.github.io/"+repoName;
+        console.log(repoName);
+
+        const url= "https://kgarcia5454.github.io/"+repoName+"/";
+
+        if(repoName=="kgarcia5454.github.io"){
+            url= "https://kgarcia5454.github.io"
+        }
+        
         
         const button = document.createElement("button");
         button.innerHTML = "Deployment";
@@ -74,7 +82,7 @@ fetch("https://api.github.com/users/kgarcia5454/repos")
             window.open(url,"_blank");
         });
 
-        var DeploymentFound = UrlTest(url);
+        let DeploymentFound = UrlTest(url);
 
         projectInfoContainer.appendChild(ProjectUrl)
         projectInfoContainer.appendChild(projectDescription)
@@ -94,6 +102,7 @@ fetch("https://api.github.com/users/kgarcia5454/repos")
     }
 })
 
+
 function ImageLoader(Image_URL,cardImage){
     var image = new Image()
 
@@ -111,7 +120,7 @@ function ImageLoader(Image_URL,cardImage){
 }
 
 function UrlTest(url){
-    var http = new XMLHttpRequest();
+    let http = new XMLHttpRequest();
     http.open("HEAD", url, false);
     http.send();
 
