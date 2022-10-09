@@ -24,6 +24,8 @@ fetch("https://api.github.com/users/kgarcia5454/repos")
         const cardContainer = document.createElement('div')
         cardContainer.className = "card center"
 
+        const cardImageContainer = document.createElement('div')
+        cardImageContainer.className = "cardImage-Container"
         const cardImage = document.createElement('img')
 
         const ImageURL = "https://raw.githubusercontent.com/kgarcia5454/" + repoName + "/main/Screenshot.png"
@@ -32,7 +34,9 @@ fetch("https://api.github.com/users/kgarcia5454/repos")
 
         cardImage.className = "project-image" 
 
-        cardContainer.appendChild(cardImage)
+
+        cardImageContainer.appendChild(cardImage)
+        cardContainer.appendChild(cardImageContainer)
         
         const projectInfoContainer = document.createElement('div')
         projectInfoContainer.className = "project-info-container"
@@ -43,6 +47,7 @@ fetch("https://api.github.com/users/kgarcia5454/repos")
 
         const projectDescription = document.createElement('p')
         projectDescription.textContent = ("Description: "+ repoDescription)
+        projectDescription.className = "project-Description"
 
         const ProjectUrl = document.createElement('a')
         ProjectUrl.href = repoURL
@@ -78,6 +83,8 @@ fetch("https://api.github.com/users/kgarcia5454/repos")
         if(DeploymentFound){
             projectInfoContainer.appendChild(button);
         }
+
+        
         
 
         cardContainer.appendChild(projectInfoContainer)

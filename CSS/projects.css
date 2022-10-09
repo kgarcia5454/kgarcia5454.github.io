@@ -4,12 +4,14 @@
 
 html {
     overflow-y: visible;
+    scrollbar-width: thin;
+    scrollbar-color: gray black;
 }
 
 a:link {
     text-decoration: none;
     color: white;
-    text-decoration-thickness: 1.5px;
+
 }
 
 a:visited {
@@ -22,50 +24,92 @@ a:hover {
 
 body {
     padding-bottom: 50px;
+    
 }
 
 .card {
-    width: 40vw;
+    max-width: 50vw;
     border: 5px solid #e1e1e1;
     border-radius: 15px;
-    box-shadow: 10px 20px 7px rgba(0, 0, 0, 0.392);
+    transition: all 0.5s ease 0s;
     background-color: rgba(207, 206, 206, 0.098);
-    margin-top: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 3vh;
+    max-height: 45vh;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+    animation: 1.3s ease-in-out 0s 1 FadeIn;
+    
 }
 
+
+
+.card:hover{
+    border: 5.5 solid white;
+    box-shadow: 10px 20px 7px rgba(0, 0, 0, 0.392);
+    transform: translateY(-0.3vh);
+}
+
+.card:hover .project-info-container{
+    top:0vh
+}
+.card:hover .project-name{
+    top:0vh
+}
+
+
+
+
 #Deployment {
-    margin-bottom: 1.2vh;
     color: black;
     border: 5px solid black;
+    font-size: 2vh;
 }
 
 .project-name {
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    position: absolute;
+    transition: all 0.4s ease 0s;
     font-size: 5vh;
+    top: -4vh;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project-image {
-    margin-bottom: -5px;
-    border-radius: 7px 7px 0px 0px;
-    object-fit: initial;
-    height: 250px;
-    width: 100%;
+    height: 45vh;
+    width: 50vw;
+    animation: 1.3s ease-in-out 0s 1 FadeIn;
+    
 }
 
+
+
 .project-info-container {
-    border-top: 5px solid #e1e1e1;
-    background-color: #00000072;
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000000a8;
     border-radius: 0px 0px 8px 8px;
+    width: 100%;
+    height: 100%;
     color: white;
-    font-size: 26px;
-    padding: 8px;
+    font-size:2.5vh;
+    transition: all 0.4s ease 0s;
+    top: 37vh;
 }
+
+
+
 
 .project-language {
     word-break: normal;
 }
+
 
 #back_button {
     position: fixed;
@@ -77,9 +121,10 @@ body {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+
 @media screen and (max-width: 800px) {
     .card {
-        width: 78vw;
+        width: 100vw;
     }
 
     #back_button {
@@ -120,4 +165,17 @@ body {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@keyframes FadeIn {
+    0%{
+        width: 0vw;
+        height: 0vh;
+        opacity: 0;
+    }
+    100%{
+        width:50vw;
+        height:45vh;
+        opacity: 1;
+    }
 }
