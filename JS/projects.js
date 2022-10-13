@@ -60,15 +60,57 @@ fetch("https://api.github.com/users/kgarcia5454/repos")
         ProjectUrl.target = "_blank"
         ProjectUrl.appendChild(projectTitle)
 
-  
-        const projectLanguage = document.createElement('p')
+
+        //Saving this portion incase of damage
+        /*const projectLanguage = document.createElement('p')
 
         fetch(repoLanguageList)
         .then (response => response.json())
         .then(data => {
+            
             projectLanguage.textContent = "Languages: " + Object.keys(data).join(', ');
             projectLanguage.className = "project-language"
         })
+
+        */
+
+        const projectLanguage = document.createElement('div')
+        projectLanguage.className = "project-language"
+
+        fetch(repoLanguageList)
+        .then (response => response.json())
+        .then(data => {
+            for(const key of Object.keys(data)){
+                
+                if(key == "Java"){
+                    const java = document.createElement('span')
+                    java.className = "devicon-java-plain-wordmark"
+                    projectLanguage.appendChild(java)
+                }
+
+                if(key == "CSS"){
+                    const CSS = document.createElement('span')
+                    CSS.className = "devicon-css3-plain-wordmark"
+                    projectLanguage.appendChild(CSS)
+                }
+
+                if(key == "HTML"){
+                    const HTML = document.createElement('span')
+                    HTML.className = "devicon-html5-plain-wordmark"
+                    projectLanguage.appendChild(HTML)
+                }
+
+                if(key == "JavaScript"){
+                    const Javascript = document.createElement('span')
+                    Javascript.className = "devicon-javascript-plain"
+                    projectLanguage.appendChild(Javascript)
+                }
+            }
+        })
+
+        
+
+        
 
         let url= "https://kgarcia5454.github.io/"+repoName+"/";
 
@@ -87,12 +129,6 @@ fetch("https://api.github.com/users/kgarcia5454/repos")
         });
 
         let DeploymentFound = UrlTest(url);
-
-        
-
-        console.log(projectTitle.textContent)
-        console.log(projectTitle.textContent.length)
-
 
         projectInfoContainer.appendChild(ProjectUrl)
         projectInfoContainer.appendChild(projectDescription)
