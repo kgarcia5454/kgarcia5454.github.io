@@ -75,6 +75,11 @@ body {
     margin-top: 0;
 }
 
+.project-Description{
+    margin-top: 0vh;
+    margin-bottom: 5vh;
+}
+
 .project-image {
     height: 45vh;
     width: 50vw;
