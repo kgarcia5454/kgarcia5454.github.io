@@ -28,12 +28,12 @@ body {
 }
 
 .card {
-    max-width: 50vw;
+    width: 50vw;
     border: 5px solid #e1e1e1;
     border-radius: 15px;
-    transition: all 0.5s ease 0s;
+    transition: all 0.3s ease 0s;
     background-color: rgba(207, 206, 206, 0.098);
-    margin-bottom: 3vh;
+    margin-bottom: 2vh;
     max-height: 45vh;
     display: flex;
     justify-content: flex-end;
@@ -42,48 +42,44 @@ body {
     animation: 1.3s ease-in-out 0s 1 FadeIn;
 }
 
-
-
 .card:hover{
     border: 5.5 solid white;
-    box-shadow: 10px 20px 7px rgba(0, 0, 0, 0.392);
-    transform: translateY(-0.3vh);
+    box-shadow: 10px 20px 7px rgba(0, 0, 0, 0.493);
+    transform: translateY(-.3vh);
 }
 
 .card:hover .project-info-container{
     top:0vh
 }
 .card:hover .project-name{
-    top:0vh
+    margin-top: 3vh;
 }
 
-
+#projects_container{
+    padding-bottom: 2vh;
+}
 
 
 #Deployment {
     color: black;
     border: 5px solid black;
     font-size: 2vh;
+    margin-bottom: 50vw;
 }
 
 .project-name {
-    position: absolute;
-    transition: all 0.4s ease 0s;
+    transition: all 0.3s ease 0s;
     font-size: 5vh;
-    top: -4vh;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    overflow: hidden;
+    margin-top: 0;
 }
 
 .project-image {
     height: 45vh;
     width: 50vw;
     animation: 1.3s ease-in-out 0s 1 FadeIn;
-    
+    z-index: 0;
 }
-
 
 
 .project-info-container {
@@ -101,14 +97,16 @@ body {
     transition: all 0.4s ease 0s;
     top: 37vh;
     animation: 1.3s ease-in-out 0s 1 FadeIn;
+    justify-content: space-between;
 }
+
+
+
 
 
 .project-language {
     word-break: normal;
 }
-
-
 #back_button {
     position: fixed;
     padding: 10px;
@@ -121,9 +119,52 @@ body {
 
 
 @media screen and (max-width: 800px) {
-    .card {
-        width: 100vw;
+    body{
+        overflow-x: hidden;
     }
+
+    .card {
+        width: 80vw;
+        height: 45vh;
+        animation: 1.3s ease-in-out 0s 1 FadeInMobile;
+    }
+
+    .project-image{
+        height: 45vh;
+        width: 80vw;
+        animation: 1.3s ease-in-out 0s 1 FadeInMobile;
+    }
+
+    .project-info-container{
+        top: 37vh;
+        height: 100%;
+        animation: 1.3s ease-in-out 0s 1 FadeInMobile;
+    }
+
+
+    #long-project-container{
+        background-color: #000000a8;
+        top:35vh;
+    }
+
+    #long-project-name{
+        font-size: 8vw;
+    }
+
+
+    .project-name{
+        font-size: 9vw;
+    }
+
+    .card:hover #long-project-container{
+        top:0vh
+    }
+    .card:hover #long-project-name{
+        margin-top: 3vh;
+    }
+
+
+
 
     #back_button {
         background: rgba(255, 255, 255, 0.377);
@@ -179,8 +220,18 @@ body {
     }
 }
 
-
-
+@keyframes FadeInMobile {
+    0%{
+        width: 0vw;
+        height: 0vh;
+        opacity: 0;
+    }
+    100%{
+        width:80vw;
+        height:45vh;
+        opacity: 1;
+    }
+}
 
 @keyframes FadeOut {
     0%{
