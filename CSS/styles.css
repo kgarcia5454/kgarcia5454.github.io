@@ -1,6 +1,9 @@
 html {
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+
 }
+
+
 
 .background {
     background: rgb(156, 14, 9);
@@ -12,6 +15,16 @@ html {
     );
     background-repeat: no-repeat;
     background-attachment: fixed;
+    animation: 2s ease onLoad ;
+}
+
+@keyframes onLoad {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 #intro {
@@ -33,9 +46,8 @@ body {
 
 .page-title {
     color: white;
-    font-size: 100px;
-    font-weight: bolder;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 90px;
+    font-weight: bold;
     text-align: center;
     margin-top: 3.5vh;
     margin-bottom: 3vh;
@@ -45,8 +57,6 @@ body {
 #cursor {
     color: #f8f8f0;
     font-size: 100px;
-    font-weight: bolder;
-    font-family: sans-serif;
     font-weight: lighter;
 }
 
@@ -83,8 +93,7 @@ body {
 .summary-content {
     color: #ffffff;
     font-size: 48px;
-    font-weight: bold;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-weight: light;
     margin-left: 1vw;
     text-align: center;
 
@@ -132,8 +141,7 @@ body {
     border-radius: 10px;
     transition: all 0.3s ease 0s;
     font-size: 20px;
-    font-weight: bold;
-    font-family: sans-serif;
+    font-weight: light;
     font-style: italic;
     margin-right: 1vw;
     margin-left: 0.5vw;
@@ -175,12 +183,13 @@ body {
 
 #AboutText {
     text-align: center;
+    font-weight: lighter;
 }
 
 #EducationText {
     margin-bottom: 40px;
     font-size: 20px;
-    font-weight: bold;
+    
 }
 
 #EducationLogo {

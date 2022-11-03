@@ -42,17 +42,13 @@ fetch("https://api.github.com/users/kgarcia5454/repos")
         const projectInfoContainer = document.createElement('div')
         projectInfoContainer.className = "project-info-container"
 
-        const projectTitleContainer = document.createElement('div')
-        projectTitleContainer.className="project-title-container"
-
         const projectTitle = document.createElement('h3')
         projectTitle.className = "project-name"
         projectTitle.textContent = Title
-
         
 
         const projectDescription = document.createElement('p')
-        projectDescription.textContent = ("Description: "+ repoDescription)
+        projectDescription.textContent = (repoDescription)
         projectDescription.className = "project-Description"
 
         const ProjectUrl = document.createElement('a')
@@ -144,8 +140,10 @@ fetch("https://api.github.com/users/kgarcia5454/repos")
         projectsContainer.appendChild(cardContainer)
 
         if(projectTitle.textContent.length > 15){
-            projectInfoContainer.id = "long-project-container"
             projectTitle.id = "long-project-name"
+            if(projectTitle.textContent.length>22){
+                projectInfoContainer.id = "long-project-container"
+            }
         }
     }
 })

@@ -66,6 +66,9 @@ body {
     font-size: 2vh;
     margin-top: 5vh;
     margin-bottom: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 .project-name {
@@ -73,11 +76,15 @@ body {
     font-size: 5vh;
     overflow: hidden;
     margin-top: 0;
+
 }
 
 .project-Description{
     margin-top: 0vh;
-    margin-bottom: 5vh;
+    margin-bottom: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5vw;
 }
 
 .project-image {
@@ -90,20 +97,18 @@ body {
 
 .project-info-container {
     position: absolute;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #000000a8;
+    display:grid;
+    font-weight: lighter;
+    background-color: #000000c8;
     border-radius: 0px 0px 8px 8px;
     width: 100%;
     height: 100%;
     color: white;
-    font-size:2.5vh;
+    font-size:3.5vh;
     transition: all 0.4s ease 0s;
     top: 37vh;
     animation: 1.3s ease-in-out 0s 1 FadeIn;
-    justify-content: space-between;
+    row-gap: -15vh;
 }
 
 
@@ -112,12 +117,12 @@ body {
 
 .project-language{
     display: flex;
-    font-size: 8vh;
+    font-size: 7vh;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1vh;
+    margin-bottom: 0vh;
     justify-content: space-around;
-    width: 30%;
+    width: 35%;
 }
 #back_button {
     position: fixed;
@@ -126,7 +131,6 @@ body {
     color: black;
     text-decoration: none;
     margin-left: 15px;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 
@@ -154,8 +158,11 @@ body {
     }
 
     .project-Description{
-        margin-top: -2vh;
+        margin-top: 2vh;
         margin-bottom: 3vh;
+        font-weight: normal;
+        font-size: 2.5vh;
+        width:95%;
     }
 
 
@@ -164,9 +171,17 @@ body {
         top:35vh;
     }
 
+    #long-project-container .project-Description {
+        font-size: 2.1vh;
+    }
+
+    #long-project-container .project-language {
+        margin-bottom: -2.5vh;
+    }
 
     #long-project-name{
-        font-size: 8vw;
+        font-size: 7.5vw;
+        margin-bottom: 0vh;
     }
 
 
@@ -183,20 +198,16 @@ body {
 
     .project-language{
         font-size: 7vh;
+        margin-bottom: 0vh;
         width: 70%;
     }
-
-
-
-    #Deployment {
-        margin-top: 1vh;
-    }
-
+    
 
     #back_button {
-        background: rgba(255, 255, 255, 0.377);
+        background: rgba(255, 255, 255, 0.599);
         margin-top: 2vh;
         font-size: 15px;
+        z-index: 1000;
     }
 
     #cursor {
