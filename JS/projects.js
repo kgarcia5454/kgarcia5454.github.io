@@ -13,7 +13,7 @@ fetch("https://api.github.com/users/kgarcia5454/repos")
         Title = Title.replace(/[_-]/g, " "); 
 
         //Skipping profile readme
-        if(repoName == "kgarcia5454"){
+        if(repoName == "kgarcia5454" || repoName == "Bio-Siege"){
             continue;
         }
         
@@ -21,6 +21,8 @@ fetch("https://api.github.com/users/kgarcia5454/repos")
         if(repoName == "kgarcia5454.github.io"){
             Title = " Personal Portfolio";
         }
+
+        
 
         const cardContainer = document.createElement('div')
         cardContainer.className = "card center"
